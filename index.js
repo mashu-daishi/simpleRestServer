@@ -1,6 +1,11 @@
-const app  = require( 'express' )();
-const glob = require( 'glob' );
-const path = require( 'path' );
+const app        = require( 'express' )();
+const bodyParser = require( 'body-parser' );
+const glob       = require( 'glob' );
+const path       = require( 'path' );
+const config     = require( './config' );
+
+app.use( bodyParser.json() );
+app.use( bodyParser.urlencoded( { 'extended': true } ) );
 
 const routes = glob.sync( path.join( __dirname, 'routes/**/*.js' ) );
 
@@ -38,4 +43,5 @@ routes.forEach( item => {
 
 
 
-app.listen( 3000 );
+app.listen( config.express.port );
+console.log( 'Express server listening on port ' + config.express.port );
