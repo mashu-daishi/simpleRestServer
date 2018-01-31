@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+		"cluster": "pm2 start index.js -i 4",
+    "test":  "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
