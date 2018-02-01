@@ -1,4 +1,5 @@
-const app  = require( 'express' )();
+const express = require( 'express' );
+const app  = express();
 const glob = require( 'glob' );
 const path = require( 'path' );
 
@@ -36,6 +37,6 @@ routes.forEach( item => {
 	};
 } );
 
-
+app.use( express.static( 'public' ) );
 
 app.listen( 3000 );
