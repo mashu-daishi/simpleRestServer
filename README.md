@@ -1,7 +1,7 @@
 
 Make sure Mongo is running first.
 ```
-	$ docker pull mongod
+	$ docker pull mongo
 	$ docker run --name mongo -p 27017:27017 -d mongo --storageEngine wiredTiger
 ```
 

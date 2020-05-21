@@ -1,19 +1,25 @@
 {
-  "name": "simpleRestServer",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "1.18.2",
-    "express": "4.16.2",
-    "glob": "7.1.2",
-    "mongodb": "3.0.2",
-    "uuid": "3.2.1"
-  }
+	"author": "",
+	"dependencies": {
+		"body-parser": "1.18.2",
+		"express": "4.16.2",
+		"glob": "7.1.2",
+		"mongodb": "3.0.2",
+		"uuid": "3.2.1"
+	},
+	"description": "",
+	"devDependencies": {
+		"@types/express": "^4.16.1",
+		"tslint": "^5.12.1",
+		"typescript": "^3.3.3"
+	},
+	"keywords": [],
+	"license": "ISC",
+	"main": "index.js",
+	"name": "simpleRestServer",
+	"scripts": {
+		"start": "tsc && node dist/index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"version": "1.0.0"
 }
